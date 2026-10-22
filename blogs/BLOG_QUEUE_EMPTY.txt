@@ -1,0 +1,32 @@
+BLOG QUEUE EMPTY — 2026-07-15
+
+Every non-comment line in:
+  D:\Old laptop\01 Aimnxt\AimNxt Codex Workspace\Blog Context and keywords\blog-keywords.txt
+is now marked [DONE]. There is no pending keyword left to process.
+
+Per the automation's non-negotables, this run does NOT invent a keyword. New keywords must be
+added to blog-keywords.txt (researched, real, clustered) before the next post can be produced.
+
+WHAT'S BEEN COVERED SO FAR (11 posts, all [DONE]):
+  Cluster: Networking (NIP/CCNA/CCNP) — 5 posts (AEO quick-wins, career transition, comparison, salary)
+  Cluster: Cyber Security — 4 posts (hands-on labs, city comparison, certifications, plus 1 legacy placement post)
+  Cluster: SOC Analyst — 1 post (city comparison)
+  Cluster: Networking (local/beginners) — 1 post
+  Cluster: Generative AI — 1 post (city comparison)
+
+WHAT'S STILL EMPTY (per blog-keywords.txt cluster headers — never filled):
+  Cluster 2: Cyber Security        — has posts, but no dedicated AEO quick-win ("what is cyber security", "cyber security jobs after 12th") or technical-depth cluster yet
+  Cluster 3: SOC Analyst           — only 1 (comparison) post; no AEO quick-win, technical-depth, or salary post yet
+  Cluster 4: VAPT / Ethical Hacking — ZERO dedicated queue lines (2 legacy posts exist: penetration-testing-course, how-to-become-a-penetration-tester, but no new researched keywords queued)
+  Cluster 5: Data Analyst          — ZERO lines queued. Curriculum PDF is also MISSING from the PRIMARY folder (CURRICULUM_MAP.md flags this) — needs both a keyword batch AND a curriculum PDF drop before this cluster can run.
+  Cluster 6: Data Science          — ZERO lines queued. Curriculum PDF exists only in FALLBACK (Coure Content\Data Science Course final.pdf) — usable, but no keywords researched yet.
+  Cluster 7: Generative AI         — only 1 (comparison) post; no AEO quick-win, technical-depth, or salary post yet.
+
+RECOMMENDED NEXT STEP:
+Run a live competitor + keyword research session (same DNA method as competitors.md) for one or
+more of the empty clusters above, then paste the researched "PRIMARY KEYWORD | Blog Title | slug"
+lines into blog-keywords.txt under the matching cluster header. Suggested priority: Data Analyst
+and Data Science (both currently 0% represented in the blog programme) and VAPT/Ethical Hacking
+technical-depth topics (e.g. "VAPT phases explained", "OWASP Top 10 for beginners").
+
+<run-summary>The keyword queue is fully [DONE] — no pending line to process, so no new post was produced. Wrote BLOG_QUEUE_EMPTY.txt listing which clusters (Data Analyst, Data Science, VAPT, SOC Analyst, Cyber Security, Generative AI) still need a researched keyword batch before the next run can proceed. Data Analyst also needs its curriculum PDF added to the PRIMARY folder.</run-summary>

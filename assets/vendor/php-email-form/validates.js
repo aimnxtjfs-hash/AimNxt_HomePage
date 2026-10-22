@@ -61,21 +61,30 @@ console.log(formData)
         }
       })
 
-      .then(data => {
-      
-        console.log(thisForm.id);
-     console.log(data);
-        if (data.trim() == 'OK' || data.trim()=='Thanks') {
-           thisForm.querySelector('.loading').style.display="none";
-         thisForm.querySelector('.error-message').style.display="none";
-        thisForm.querySelector('.sent-message').style.display="block";
-      
-            thisForm.reset();
-          } else {
-            throw new Error(data ? data : 'Form submission failed and no error message returned from: ' + action);
-          }
-        }
-      )
+.then(data => {
+
+  console.log("Form ID:", thisForm.id);
+  console.log("PHP Response:", data);
+
+  const result = data.trim();
+
+  if (result === 'OK' || result === 'Thanks') {
+
+    thisForm.querySelector('.loading').style.display = "none";
+    thisForm.querySelector('.error-message').style.display = "none";
+
+    thisForm.reset();
+
+    document.dispatchEvent(new Event('aimnxtFormSuccess'));
+
+  } else {
+
+    throw new Error(
+      result || 'Form submission failed and no error message returned from: ' + action
+    );
+
+  }
+})
       .catch((error) => {
         console.log(error);
         displayError(thisForm, error);

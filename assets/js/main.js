@@ -54,12 +54,41 @@
   /**
    * Mobile nav toggle
    */
-  on('click', '.mobile-nav-toggle', function(e) {
-    select('#navbar').classList.toggle('navbar-mobile')
-    this.classList.toggle('bx-list-ul')
-    this.classList.toggle('bx-x')
-  })
+on('click', '.mobile-nav-toggle', function(e) {
+  const navbar = select('#navbar');
+  const registerButton = select('#header-mobileview');
 
+  navbar.classList.toggle('navbar-mobile');
+  this.classList.toggle('bx-list-ul');
+  this.classList.toggle('bx-x');
+
+  if (registerButton) {
+    registerButton.classList.toggle(
+      'menu-open-behind',
+      navbar.classList.contains('navbar-mobile')
+    );
+  }
+})
+  /**
+   * Close mobile menu when tapping outside menu links
+   */
+  document.addEventListener('click', function (e) {
+    const navbar = select('#navbar');
+    const menuToggle = select('.mobile-nav-toggle');
+
+    if (!navbar || !menuToggle || !navbar.classList.contains('navbar-mobile')) {
+      return;
+    }
+
+    const clickedMenu = e.target.closest('#navbar > ul');
+    const clickedToggle = e.target.closest('.mobile-nav-toggle');
+
+    // The mobile navbar overlay covers the logo area too.
+    // Close it unless the user clicked a menu item or toggle icon.
+    if (!clickedMenu && !clickedToggle) {
+      menuToggle.click();
+    }
+  });
 /**
  * Mobile nav dropdowns activate
  */
@@ -133,8 +162,9 @@ on('click', '.navbar .dropdown > a', function(e) {
     }
   });
 
-  
-
+  document.addEventListener('aimnxtFormSuccess', function () {
+    window.location.href = '/thank-you.html';
+});
   /**
    * Animation on scroll
    */
