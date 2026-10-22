@@ -53760,3 +53760,412 @@ body.thank-you-page .thank_you_hero_section_title {
     margin: 0;
     border-radius: 0;
 }
+.Diwali_2026_Offers-ov {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  box-sizing: border-box;
+  background: rgba(8, 10, 38, .78);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  animation: Diwali_2026_Offers-in .3s ease both;
+  overflow: hidden;
+  overscroll-behavior: contain;
+}
+
+.Diwali_2026_Offers-pn {
+  --pt: #D4AF37;
+  --pw: 620px;
+  --max: 550px;
+  position: relative;
+  box-sizing: border-box;
+  width: min(94vw, var(--pw));
+  max-height: calc(100vh - 24px);
+  max-height: calc(100dvh - 24px);
+  padding: 42px 24px 20px;
+  border-radius: 22px;
+  overflow: hidden;
+  color: #fff;
+  background: radial-gradient(
+    circle at 50% -10%,
+    #3d47a8,
+    #282f73 52%,
+    #1a1f52
+  );
+  border: 2px solid #D4AF37;
+  box-shadow:
+    0 0 0 5px rgba(212, 175, 55, .22),
+    0 24px 60px rgba(0, 0, 0, .55);
+}
+
+.Diwali_2026_Offers-pn::before {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border: 1px dashed rgba(212, 175, 55, .55);
+  border-radius: 16px;
+  pointer-events: none;
+}
+
+.Diwali_2026_Offers-x {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 5;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #D4AF37;
+  color: #282f73;
+  font: 700 32px/42px Arial, sans-serif;
+  cursor: pointer;
+}
+
+.Diwali_2026_Offers-wv,
+.Diwali_2026_Offers-rs {
+  position: relative;
+  z-index: 1;
+}
+
+.Diwali_2026_Offers-wh {
+  position: relative;
+  margin: 0 auto;
+  aspect-ratio: 1;
+  width: min(
+    100%,
+    var(--max, 550px),
+    max(0px, calc(100vh - 160px))
+  );
+  width: min(
+    100%,
+    var(--max, 550px),
+    max(0px, calc(100dvh - 160px))
+  );
+}
+
+.Diwali_2026_Offers-wheel-slot {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  overflow: clip;
+  border-radius: 50%;
+  contain: paint;
+}
+
+.Diwali_2026_Offers-sv {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform-origin: 50% 50%;
+  will-change: transform;
+}
+
+.Diwali_2026_Offers-sg {
+  cursor: pointer;
+  outline: 0;
+}
+
+.Diwali_2026_Offers-sg:hover path,
+.Diwali_2026_Offers-sg:focus-visible path {
+  filter: brightness(1.15);
+}
+
+.Diwali_2026_Offers-lock .Diwali_2026_Offers-wh {
+  pointer-events: none;
+}
+
+.Diwali_2026_Offers-pt {
+  position: absolute;
+  left: 50%;
+  top: -4px;
+  z-index: 3;
+  width: 0;
+  height: 0;
+  margin-left: -13px;
+  border: 13px solid transparent;
+  border-top: 28px solid var(--pt, #D4AF37);
+  border-bottom: 0;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, .45));
+}
+
+.Diwali_2026_Offers-hub {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  width: 35%;
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  text-align: center;
+  pointer-events: none;
+  font-weight: 700;
+  font-size: clamp(9px, 2.3vw, 14px);
+  line-height: 1.15;
+  background: radial-gradient(circle, #fff, #f8f0d6);
+  border: 4px solid #D4AF37;
+  color: #775800;
+  box-shadow: 0 0 0 3px #282f73;
+}
+
+.Diwali_2026_Offers-hub img {
+  width: 64%;
+  height: auto;
+  display: block;
+}
+
+.Diwali_2026_Offers-hub i {
+  display: none;
+  color: #282f73;
+  font: 800 clamp(12px, 3.4vw, 19px)/1 Georgia, serif;
+}
+
+.Diwali_2026_Offers-nl img {
+  display: none;
+}
+
+.Diwali_2026_Offers-nl i {
+  display: block;
+}
+
+.Diwali_2026_Offers-instruction {
+  text-align: center;
+  color: #fff;
+  font-size: clamp(12px, 3vw, 16px);
+  font-weight: 650;
+  margin: 12px 0 0;
+}
+
+.Diwali_2026_Offers-fx {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.Diwali_2026_Offers-rs {
+  display: none;
+  text-align: center;
+  padding: 28px 6px 14px;
+}
+
+.Diwali_2026_Offers-res .Diwali_2026_Offers-wv {
+  display: none;
+}
+
+.Diwali_2026_Offers-res .Diwali_2026_Offers-rs {
+  display: block;
+  animation: Diwali_2026_Offers-pop .45s ease both;
+}
+
+.Diwali_2026_Offers-r {
+  color: #fff;
+  font-size: clamp(17px, 4vw, 22px);
+  line-height: 1.5;
+  margin: 20px 0;
+  text-shadow: 0 1px 2px #10153d;
+}
+
+.Diwali_2026_Offers-r b {
+  display: block;
+  margin-top: 2px;
+}
+
+.Diwali_2026_Offers-c b {
+  color: #f5d467;
+  font-size: clamp(25px, 6vw, 38px);
+  line-height: 1.25;
+  -webkit-text-stroke: .5px #a77e13;
+  text-shadow: 0 2px 2px #121943;
+  animation: Diwali_2026_Offers-zoom 1s ease-in-out 3;
+  transform-origin: center;
+  margin: 10px auto 0;
+  max-width: 95%;
+  overflow-wrap: break-word;
+}
+
+.Diwali_2026_Offers-s b {
+  text-decoration: line-through;
+}
+
+.Diwali_2026_Offers-o b {
+  color: #ffe08a;
+  font-size: clamp(38px, 9vw, 54px);
+  -webkit-text-stroke: .6px #c1982e;
+  text-shadow: 0 0 18px rgba(212, 175, 55, .6);
+}
+
+.Diwali_2026_Offers-n {
+  margin: -6px 0 0;
+  color: #fff;
+  opacity: 1;
+  font-size: 14px;
+}
+
+.Diwali_2026_Offers-btn {
+  display: block;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 4;
+  max-width: 290px;
+  margin: 30px auto 4px;
+  padding: 13px 18px;
+  border-radius: 999px;
+  border: 2px solid #202653;
+  outline: 2px solid #fff4c5;
+  background: linear-gradient(#f2d36b, #D4AF37);
+  color: #282f73;
+  box-shadow: 0 6px 18px rgba(212, 175, 55, .45);
+  font-weight: 700;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+.Diwali_2026_Offers-btn:focus-visible,
+.Diwali_2026_Offers-x:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 4px;
+}
+
+@keyframes Diwali_2026_Offers-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes Diwali_2026_Offers-pop {
+  from {
+    opacity: 0;
+    transform: scale(.94);
+  }
+}
+
+@keyframes Diwali_2026_Offers-zoom {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+@media (max-width: 420px) {
+  .Diwali_2026_Offers-pn {
+    padding: 48px 12px 20px;
+  }
+
+  .Diwali_2026_Offers-rs {
+    padding: 12px 4px;
+  }
+
+  .Diwali_2026_Offers-btn {
+    font-size: 19px;
+  }
+}
+
+@media (max-height: 560px) {
+  .Diwali_2026_Offers-res .Diwali_2026_Offers-pn {
+    padding: 16px 24px;
+  }
+
+  .Diwali_2026_Offers-rs {
+    padding: 0 36px;
+  }
+
+  .Diwali_2026_Offers-r {
+    margin: 8px 0;
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  .Diwali_2026_Offers-c b {
+    font-size: 25px;
+    margin-top: 5px;
+  }
+
+  .Diwali_2026_Offers-o b {
+    font-size: 34px;
+  }
+
+  .Diwali_2026_Offers-btn {
+    font-size: 18px;
+    padding: 9px 16px;
+    margin-top: 14px;
+  }
+
+  .Diwali_2026_Offers-n {
+    font-size: 12px;
+    margin: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .Diwali_2026_Offers-ov,
+  .Diwali_2026_Offers-rs,
+  .Diwali_2026_Offers-c b {
+    animation: none !important;
+  }
+}
+.Diwali_2026_Offers-x {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  line-height: 1;
+}
+
+
+/* AimNxt Diwali Hero Background */
+.hero-section {
+    position: relative;
+    isolation: isolate;
+    background-color: #071b50;
+    background-image: url("/assets/img/aimnxt_diwali_hero_Desktop.webp");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+/* Keep hero content above the background */
+.hero-section > .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Preserve existing desktop social rail positioning */
+.hero-section > .aimnxt_social_icons {
+    z-index: 10;
+}
+
+/* Mobile background */
+@media (max-width: 767.98px) {
+    .hero-section {
+        background-image: url("/assets/img/aimnxt_diwali_hero_Mobile.webp");
+        background-size: cover;
+        background-position: center top;
+    }
+}
+
+/* Tablet background */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .hero-section {
+        background-image: url("/assets/img/aimnxt_diwali_hero_Desktop.webp");
+        background-position: center center;
+    }
+}

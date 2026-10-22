@@ -69,7 +69,7 @@ src="https://www.facebook.com/tr?id=1350507153915494&ev=PageView&noscript=1"
   <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    <link href="/assets/css/style.css?v=20260926165500" rel="stylesheet">
+    <link href="/assets/css/style.css?v=20261022162516" rel="stylesheet">
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
@@ -755,7 +755,574 @@ window.addEventListener("load", updateProgress);
 
 
   
+<!--diwali offers-->
 
+
+<template id="aimnxt-popup">
+  <div class="Diwali_2026_Offers-pn">
+    <canvas class="Diwali_2026_Offers-fx" aria-hidden="true"></canvas>
+
+    <button
+      type="button"
+      class="Diwali_2026_Offers-x"
+      aria-label="Close popup"
+    >&times;</button>
+
+    <div class="Diwali_2026_Offers-wv">
+      <div class="Diwali_2026_Offers-wh">
+        <div class="Diwali_2026_Offers-wheel-slot"></div>
+        <div class="Diwali_2026_Offers-pt" aria-hidden="true"></div>
+
+        <div class="Diwali_2026_Offers-hub">
+          <img alt="AimNxt">
+          <i>AimNxt</i>
+          <span>Diwali Offer 2026</span>
+        </div>
+      </div>
+
+      <p class="Diwali_2026_Offers-instruction">
+        Select a course to spin &amp; reveal your offer
+      </p>
+    </div>
+
+    <div class="Diwali_2026_Offers-rs" aria-live="polite"></div>
+  </div>
+</template>
+
+<script>
+(function () {
+  "use strict";
+
+  var REG = "/register.html";
+  var LOGO = "/assets/img/logo.webp";
+
+  var COURSES = [
+    ["Cyber Security", "\u20b940,000", "\u20b935,000"],
+    ["SOC Analyst", "\u20b930,000", "\u20b925,000"],
+    ["Gen AI", "\u20b945,000", "\u20b940,000"],
+    ["Java Full Stack", "\u20b925,000", "\u20b922,000"],
+    ["Python Full Stack", "\u20b925,000", "\u20b922,000"],
+    ["Networking (CCNA + CCNP)", "\u20b930,000", "\u20b925,000"]
+  ];
+
+  var STEP = 60;
+  var DURATION = 2600;
+
+  function point(radius, angle) {
+    angle = angle * Math.PI / 180;
+
+    return [
+      (radius * Math.sin(angle)).toFixed(2),
+      (-radius * Math.cos(angle)).toFixed(2)
+    ];
+  }
+
+  function reducedMotion() {
+    return window.matchMedia &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  }
+
+  function label(name, angle, color) {
+    var lines = {
+      "Cyber Security": ["Cyber", "Security"],
+      "SOC Analyst": ["SOC", "Analyst"],
+      "Gen AI": ["Gen AI"],
+      "Java Full Stack": ["Java", "Full Stack"],
+      "Python Full Stack": ["Python", "Full Stack"],
+      "Networking (CCNA + CCNP)": [
+        "Networking",
+        "(CCNA + CCNP)"
+      ]
+    }[name];
+
+    var position = point(133, angle);
+    var fontSize = name.startsWith("Networking") ? 12 : 15;
+    var outline = color === "#fff" ? "#17204f" : "#fff0ac";
+
+    return (
+      '<text x="' + position[0] +
+      '" y="' + position[1] +
+      '" text-anchor="middle"' +
+      ' dominant-baseline="middle"' +
+      ' font-size="' + fontSize +
+      '" font-weight="800"' +
+      ' fill="' + color +
+      '" stroke="' + outline +
+      '" stroke-width="1.6"' +
+      ' stroke-linejoin="round"' +
+      ' paint-order="stroke"' +
+      ' pointer-events="none">' +
+      lines.map(function (line, index) {
+        var offset = index === 0
+          ? (lines.length > 1 ? -8 : 0)
+          : 18;
+
+        return (
+          '<tspan x="' + position[0] +
+          '" dy="' + offset + '">' +
+          line +
+          "</tspan>"
+        );
+      }).join("") +
+      "</text>"
+    );
+  }
+
+  function fireworks(canvas, options) {
+    var context = canvas.getContext("2d");
+    var density = Math.min(window.devicePixelRatio || 1, 2);
+    var width = canvas.clientWidth;
+    var height = canvas.clientHeight;
+    var particles = [];
+    var random = Math.random;
+    var started;
+
+    canvas.width = width * density;
+    canvas.height = height * density;
+    context.scale(density, density);
+
+    var spots = [
+      [.12, .22],
+      [.88, .22],
+      [.22, .12],
+      [.78, .12],
+      [.14, .35],
+      [.86, .35]
+    ];
+
+    function randomColor() {
+      return options.colors[
+        Math.floor(random() * options.colors.length)
+      ];
+    }
+
+    for (var i = 0; i < options.b; i++) {
+      for (var j = 0; j < options.n; j++) {
+        var angle = j / options.n * Math.PI * 2 + random() * .3;
+        var speed = .6 + random();
+
+        particles.push({
+          type: "line",
+          x: spots[i][0] * width,
+          y: spots[i][1] * height,
+          vx: Math.cos(angle) * speed,
+          vy: Math.sin(angle) * speed,
+          gravity: .012,
+          color: randomColor(),
+          delay: i * 140,
+          life: 900 + random() * 300
+        });
+      }
+    }
+
+    for (var k = 0; k < options.s; k++) {
+      var spot = spots[Math.floor(random() * spots.length)];
+
+      particles.push({
+        type: "star",
+        x: spot[0] * width + (random() - .5) * 60,
+        y: spot[1] * height + (random() - .5) * 60,
+        vx: 0,
+        vy: 0,
+        gravity: 0,
+        color: options.sc,
+        size: 6 + random() * 6,
+        delay: random() * 600,
+        life: 700 + random() * 300
+      });
+    }
+
+    function star(x, y, radius) {
+      context.beginPath();
+      context.moveTo(x, y - radius);
+      context.quadraticCurveTo(x, y, x + radius, y);
+      context.quadraticCurveTo(x, y, x, y + radius);
+      context.quadraticCurveTo(x, y, x - radius, y);
+      context.quadraticCurveTo(x, y, x, y - radius);
+      context.fill();
+    }
+
+    function frame(timestamp) {
+      if (!started) started = timestamp;
+
+      var elapsed = timestamp - started;
+      var live = false;
+
+      context.clearRect(0, 0, width, height);
+
+      particles.forEach(function (particle) {
+        var age = elapsed - particle.delay;
+
+        if (age < 0) {
+          live = true;
+          return;
+        }
+
+        if (age > particle.life) return;
+
+        live = true;
+
+        var progress = age / particle.life;
+        var ticks = age / 16.7;
+        var x = particle.x + particle.vx * ticks;
+        var y = particle.y +
+          particle.vy * ticks +
+          .5 * particle.gravity * ticks * ticks;
+
+        context.globalAlpha = progress < .6
+          ? 1
+          : 1 - (progress - .6) / .4;
+
+        context.fillStyle = particle.color;
+        context.strokeStyle = particle.color;
+
+        if (particle.type === "star") {
+          star(
+            x,
+            y,
+            particle.size * Math.sin(Math.PI * progress)
+          );
+        } else {
+          context.lineWidth = 1.6;
+          context.beginPath();
+          context.moveTo(x, y);
+          context.lineTo(
+            x - particle.vx * 4,
+            y - (particle.vy + particle.gravity * ticks) * 4
+          );
+          context.stroke();
+        }
+      });
+
+      if (live && elapsed < 2000 && canvas.isConnected) {
+        requestAnimationFrame(frame);
+      } else {
+        canvas.remove();
+      }
+    }
+
+    requestAnimationFrame(frame);
+  }
+
+  function init(config) {
+    var namespace = config.ns;
+    var settings = window.AimNxtDiwaliConfig || {};
+    var overlay;
+    var keyHandler;
+
+    var state = {
+      rotation: 0,
+      selected: -1,
+      timer: 0,
+      openTimer: 0,
+      frame: 0
+    };
+
+    function classes(markup) {
+      return markup.replace(/~/g, namespace + "-");
+    }
+
+    function wheel() {
+      var markup =
+        '<svg class="~sv" viewBox="-200 -200 400 400">' +
+        '<circle r="198" fill="' + config.rim + '"/>' +
+        '<circle r="187" fill="' + config.rimIn + '"/>';
+
+      var i;
+      var start;
+      var end;
+
+      for (i = 0; i < COURSES.length; i++) {
+        start = point(184, i * STEP);
+        end = point(184, (i + 1) * STEP);
+
+        markup +=
+          '<g class="~sg" data-i="' + i +
+          '" role="button" tabindex="0"' +
+          ' aria-label="Select ' + COURSES[i][0] + '">' +
+          '<path d="M0 0L' + start +
+          'A184 184 0 0 1 ' + end +
+          'Z" fill="' + config.fill[i] +
+          '" stroke="' + config.stroke +
+          '" stroke-width="2"/>' +
+          label(
+            COURSES[i][0],
+            i * STEP + STEP / 2,
+            config.text[i]
+          ) +
+          "</g>";
+      }
+
+      for (i = 0; i < 12; i++) {
+        var dot = point(192.5, i * 30);
+
+        markup +=
+          '<circle cx="' + dot[0] +
+          '" cy="' + dot[1] +
+          '" r="3" fill="' + config.dot + '"/>';
+      }
+
+      return markup + "</svg>";
+    }
+
+    function reset() {
+      clearTimeout(state.timer);
+      clearTimeout(state.openTimer);
+      cancelAnimationFrame(state.frame);
+
+      if (overlay) {
+        overlay.remove();
+        overlay = null;
+      }
+
+      document.removeEventListener("keydown", keyHandler);
+      state.rotation = 0;
+      state.selected = -1;
+    }
+
+    function pick(index) {
+      if (state.selected > -1) return;
+
+      state.selected = index;
+      overlay.classList.add(namespace + "-lock");
+
+      var reduced = reducedMotion();
+      var duration = reduced ? 300 : DURATION;
+      var svg = overlay.querySelector("." + namespace + "-sv");
+
+      var target =
+        Math.ceil(state.rotation / 360) * 360 +
+        (reduced ? 0 : 1080) +
+        360 -
+        (index * STEP + STEP / 2);
+
+      state.rotation = target;
+
+      svg.style.transition =
+        "transform " + duration / 1000 +
+        "s cubic-bezier(.12,.6,.12,1)";
+
+      svg.style.transform = "rotate(" + target + "deg)";
+
+      var labels = Array.from(svg.querySelectorAll("text"));
+
+      function keepLabelsUpright() {
+        var matrix = getComputedStyle(svg).transform;
+        var angle = 0;
+
+        if (matrix && matrix !== "none") {
+          var values = matrix
+            .slice(matrix.indexOf("(") + 1, -1)
+            .split(",")
+            .map(Number);
+
+          angle =
+            Math.atan2(values[1], values[0]) *
+            180 / Math.PI;
+        }
+
+        labels.forEach(function (text) {
+          text.setAttribute(
+            "transform",
+            "rotate(" + (-angle) + " " +
+            text.getAttribute("x") + " " +
+            text.getAttribute("y") + ")"
+          );
+        });
+
+        state.frame = requestAnimationFrame(keepLabelsUpright);
+      }
+
+      keepLabelsUpright();
+
+      state.timer = setTimeout(function () {
+        cancelAnimationFrame(state.frame);
+        show(index);
+      }, duration + 450);
+    }
+
+    function show(index) {
+      var course = COURSES[index];
+
+      var href = settings.passCourse
+        ? REG + "?course=" + encodeURIComponent(course[0])
+        : REG;
+
+      var result = overlay.querySelector(
+        "." + namespace + "-rs"
+      );
+
+      var canvas = overlay.querySelector("canvas");
+
+      result.innerHTML = classes(
+        '<p class="~r ~c">' +
+          "<span>Student Selected:</span>" +
+          "<b>" + course[0] + "</b>" +
+        "</p>" +
+        '<p class="~r ~s">' +
+          "<span>Original Price:</span>" +
+          "<b>" + course[1] + "</b>" +
+        "</p>" +
+        '<p class="~r ~o">' +
+          "<span>Diwali Offer Price:</span>" +
+          "<b>" + course[2] + "</b>" +
+        "</p>" +
+        '<p class="~n">Offers closes on 7th of Nov 2026</p>' +
+        '<a class="~btn" href="' + href +
+          '" data-course="' + course[0] + '">' +
+          "Register Now" +
+        "</a>"
+      );
+
+      overlay.classList.add(namespace + "-res");
+
+      result.querySelector("a").focus({
+        preventScroll: true
+      });
+
+      if (reducedMotion()) {
+        canvas.remove();
+      } else {
+        fireworks(canvas, config.fx);
+      }
+    }
+
+    function open() {
+      if (overlay) return;
+
+      overlay = document.createElement("div");
+      overlay.className = namespace + "-ov";
+      overlay.setAttribute("role", "dialog");
+      overlay.setAttribute("aria-modal", "true");
+      overlay.setAttribute("aria-label", "Diwali Offer 2026");
+
+      overlay.appendChild(
+        document.getElementById("aimnxt-popup")
+          .content.cloneNode(true)
+      );
+
+      overlay.querySelector(
+        "." + namespace + "-wheel-slot"
+      ).innerHTML = classes(wheel());
+
+      var hub = overlay.querySelector(
+        "." + namespace + "-hub"
+      );
+
+      var image = hub.querySelector("img");
+
+      image.addEventListener("error", function () {
+        hub.classList.add(namespace + "-nl");
+      });
+
+      image.src = settings.logo || LOGO;
+
+      overlay.addEventListener("click", function (event) {
+        if (event.target.closest("." + namespace + "-x")) {
+          reset();
+          return;
+        }
+
+        var segment = event.target.closest(
+          "." + namespace + "-sg"
+        );
+
+        if (segment) {
+          pick(Number(segment.getAttribute("data-i")));
+        }
+      });
+
+      overlay.addEventListener("keydown", function (event) {
+        var segment = event.target.closest &&
+          event.target.closest("." + namespace + "-sg");
+
+        if (
+          segment &&
+          (event.key === "Enter" || event.key === " ")
+        ) {
+          event.preventDefault();
+          pick(Number(segment.getAttribute("data-i")));
+        }
+      });
+
+      keyHandler = function (event) {
+        if (event.key === "Escape") reset();
+      };
+
+      document.addEventListener("keydown", keyHandler);
+      document.body.appendChild(overlay);
+
+      overlay.querySelector(
+        "." + namespace + "-sg"
+      ).focus({ preventScroll: true });
+    }
+
+    function arm() {
+      clearTimeout(state.openTimer);
+      state.openTimer = setTimeout(open, config.delay || 3000);
+    }
+
+    if (document.readyState === "complete") {
+      arm();
+    } else {
+      window.addEventListener("load", arm, { once: true });
+    }
+
+    window.addEventListener("pagehide", reset);
+
+    window.addEventListener("pageshow", function (event) {
+      if (event.persisted) arm();
+    });
+  }
+
+  window.AimNxtDiwali = {
+    init: init,
+    courses: COURSES
+  };
+})();
+
+window.AimNxtDiwali.init({
+  ns: "Diwali_2026_Offers",
+  rim: "#D4AF37",
+  rimIn: "#a8841f",
+  stroke: "#f3dd8a",
+  dot: "#fff6d6",
+
+  fill: [
+    "#282f73",
+    "#1ba7df",
+    "#D4AF37",
+    "#282f73",
+    "#1ba7df",
+    "#D4AF37"
+  ],
+
+  text: [
+    "#fff",
+    "#fff",
+    "#282f73",
+    "#fff",
+    "#fff",
+    "#282f73"
+  ],
+
+  fx: {
+    colors: [
+      "#ffd84d",
+      "#ff6b6b",
+      "#1ba7df",
+      "#ff9f1c",
+      "#7CFFB2",
+      "#ff5fd0"
+    ],
+    b: 6,
+    n: 22,
+    s: 16,
+    sc: "#ffe08a"
+  }
+});
+</script>
+<!--end of diwali offers-->
   
 
   </body>
