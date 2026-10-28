@@ -206,7 +206,7 @@ src="https://www.facebook.com/tr?id=1350507153915494&ev=PageView&noscript=1"
       rel="stylesheet">
 
 <!-- Main CSS -->
-<link href="/assets/css/style.css?v=20261027122014" rel="stylesheet">
+<link href="/assets/css/style.css?v=20261028090100" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
       rel="stylesheet">
   
@@ -3504,6 +3504,538 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 </script>
+
+
+
+
+
+
+
+
+<style id="aimnxt-announcements-styles">
+.AimNxt_Corp_Announcements{position:fixed;inset:0;z-index:2147483647;display:flex;align-items:center;justify-content:center;padding:16px;font-family:"Segoe UI",Arial,sans-serif;color:#172554}
+.AimNxt_Corp_Announcements *{box-sizing:border-box}
+.AimNxt_Corp_Announcements[hidden],
+.AimNxt_Corp_Announcements [hidden]{display:none!important}
+.aimnxt-corp-promo-overlay{position:absolute;inset:0;background:rgba(10,20,60,.62);backdrop-filter:blur(5px)}
+.aimnxt-corp-promo-modal{position:relative;z-index:1;width:min(960px,100%);max-height:calc(100vh - 32px);max-height:calc(100dvh - 32px);display:flex;flex-direction:column;overflow:hidden;background:#fff;border:2px solid #0EA5E9;border-radius:24px;box-shadow:0 24px 70px rgba(7,84,199,.3)}
+.aimnxt-corp-promo-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex:none;padding:22px 26px;background:linear-gradient(120deg,#0EA5E9,#0754C7);color:#fff}
+.aimnxt-corp-promo-head h2{margin:0;font-size:28px;font-weight:500;line-height:1.2;color:#fff}
+.aimnxt-corp-promo-close{display:flex;align-items:center;justify-content:center;flex:none;width:42px;height:42px;border:0;border-radius:50%;background:#fff;color:#0754C7;font-size:25px;font-weight:700;cursor:pointer}
+.aimnxt-corp-promo-body{min-height:0;padding:22px;overflow:auto;background:#fff;background-image:radial-gradient(#d8efff 1px,transparent 1.5px);background-size:14px 14px}
+.aimnxt-corp-promo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.aimnxt-corp-promo-card{display:flex;flex-direction:column;min-width:0;overflow:hidden;border:1px solid #dbeafe;border-radius:16px;background:#fff;box-shadow:0 4px 14px #0ea5e914;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.aimnxt-corp-promo-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px #0754c72b}
+.aimnxt-corp-promo-thumb{display:flex;align-items:center;justify-content:center;width:100%;height:220px;padding:10px;background:#fff}
+.aimnxt-corp-promo-thumb img{display:block;width:100%;height:100%;object-fit:contain;object-position:center}
+.aimnxt-corp-promo-info{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:12px;border-top:1px solid #dbeafe;text-align:center}
+.aimnxt-corp-promo-info h3{margin:0;font-size:17px;color:#172554}
+.aimnxt-corp-promo-info p{margin:0;font-size:13px;line-height:1.5;color:#475569}
+.aimnxt-corp-promo-btn{display:inline-flex;align-items:center;justify-content:center;padding:11px 20px;border:0;border-radius:999px;background:linear-gradient(120deg,#0EA5E9,#0754C7);color:#fff;font:700 14px "Segoe UI",Arial,sans-serif;text-decoration:none;cursor:pointer}
+.aimnxt-corp-promo-btn:hover{background:#0754C7;color:#fff}
+.aimnxt-corp-poster-view{display:flex;flex-direction:column;align-items:stretch;width:100%}
+.aimnxt-corp-poster-title{margin:0 0 14px;font-size:20px;color:#172554}
+.aimnxt-corp-poster-img{display:block;width:100%;height:auto;max-height:62vh;object-fit:contain;background:#fff;border-radius:12px}
+.aimnxt-corp-poster-back{display:block;width:fit-content;max-width:100%;margin:18px auto 4px;padding:11px 22px;border:1px solid #dbeafe;border-radius:999px;background:#e0f2fe;color:#0754C7;font:700 13px "Segoe UI",Arial,sans-serif;cursor:pointer}
+
+/* Diwali wheel */
+#aimnxtCorpPromo .Diwali_Corp_2026_Offers-view{display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;text-align:center}
+.Diwali_Corp_2026_Offers-stage{position:relative;width:min(390px,100%);margin:4px auto 12px;padding-top:20px}
+.Diwali_Corp_2026_Offers-pointer{position:absolute;top:0;left:50%;z-index:3;transform:translateX(-50%);width:0;height:0;border-left:17px solid transparent;border-right:17px solid transparent;border-top:34px solid #172554;filter:drop-shadow(0 2px 2px #0003)}
+.Diwali_Corp_2026_Offers-wheel{display:block;width:100%;height:auto;aspect-ratio:1;margin:0 auto;border:5px solid #fff;border-radius:50%;box-shadow:0 0 0 3px #0EA5E9,0 12px 32px #0754c733;cursor:pointer;touch-action:manipulation}
+.Diwali_Corp_2026_Offers-wheel:focus-visible{outline:3px solid #0754C7;outline-offset:7px}
+.Diwali_Corp_2026_Offers-hint{display:block;width:100%;margin:14px auto 4px;color:#475569;font-size:15px;line-height:1.6;text-align:center}
+.Diwali_Corp_2026_Offers-hint strong{color:#0754C7}
+
+/* Diwali result: every element centered */
+#aimnxtCorpPromo .Diwali_Corp_2026_Offers-result{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;min-height:300px;margin:0 auto;padding:28px 18px 22px;overflow:hidden;border:1px solid #f7d58b;border-radius:18px;background:radial-gradient(ellipse at top,#fff4c5 0%,#fff 55%,#fff7e5 100%);text-align:center!important}
+#aimnxtCorpPromo .Diwali_Corp_2026_Offers-result *{text-align:center!important}
+#aimnxtCorpPromo .Diwali_Corp_2026_Offers-result-inner{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;margin:0 auto;text-align:center!important}
+#aimnxtCorpPromo .Diwali_Corp_2026_Offers-kicker{display:block;width:100%;margin:0 auto 10px;color:#a45b00;font-size:14px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+#aimnxtCorpPromo .Diwali_Corp_2026_Offers-result h3{display:block;width:100%;margin:0 auto 16px;color:#9b1c1c;font-size:clamp(25px,4vw,38px);line-height:1.2;font-weight:900;overflow-wrap:anywhere;animation:DiwaliCourseZoom .8s cubic-bezier(.18,.8,.25,1.2) both}
+#aimnxtCorpPromo .Diwali_Corp_2026_Offers-pricebox{display:flex;flex-direction:column;align-items:center;justify-content:center;width:fit-content;max-width:100%;margin:0 auto;padding:15px 24px;border:1px solid #f4d48b;border-radius:14px;background:#fff9e9;box-shadow:0 5px 20px #a45b0010}
+#aimnxtCorpPromo .Diwali_Corp_2026_Offers-original{display:block;width:100%;margin:0 auto 7px;color:#64748b;font-size:15px}
+#aimnxtCorpPromo .Diwali_Corp_2026_Offers-price-label{display:block;width:100%;margin:0 auto 3px;color:#92400e;font-size:13px;font-weight:700}
+#aimnxtCorpPromo .Diwali_Corp_2026_Offers-price{display:block;width:100%;margin:0 auto;color:#b91c1c;font-size:clamp(29px,5vw,42px);font-weight:900;line-height:1.2}
+#aimnxtCorpPromo .Diwali_Corp_2026_Offers-deadline{display:block;width:100%;margin:13px auto 18px;color:#78350f;font-size:13px}
+#aimnxtCorpPromo .Diwali_Corp_2026_Offers-enquire{align-self:center;display:inline-flex;align-items:center;justify-content:center;margin:0 auto;padding:13px 30px;border:0;border-radius:999px;background:linear-gradient(120deg,#b91c1c,#ea580c);color:#fff;font:800 15px "Segoe UI",Arial,sans-serif;text-decoration:none;box-shadow:0 6px 18px #b91c1c30;cursor:pointer;transition:transform .2s,box-shadow .2s}
+#aimnxtCorpPromo .Diwali_Corp_2026_Offers-enquire:hover{transform:translateY(-2px);box-shadow:0 10px 24px #b91c1c40;color:#fff}
+#aimnxtCorpPromo .Diwali_Corp_2026_Offers-back{align-self:center;margin:18px auto 0}
+.Diwali_Corp_2026_Offers-sparkles{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.Diwali_Corp_2026_Offers-sparkles span{position:absolute;bottom:-20px;color:#e9a11b;font-size:20px;animation:DiwaliSparkle 3.4s linear infinite}
+.Diwali_Corp_2026_Offers-sparkles span:nth-child(1){left:8%;animation-delay:0s}
+.Diwali_Corp_2026_Offers-sparkles span:nth-child(2){left:25%;animation-delay:1.2s}
+.Diwali_Corp_2026_Offers-sparkles span:nth-child(3){left:48%;animation-delay:.5s}
+.Diwali_Corp_2026_Offers-sparkles span:nth-child(4){left:70%;animation-delay:1.7s}
+.Diwali_Corp_2026_Offers-sparkles span:nth-child(5){left:88%;animation-delay:.8s}
+@keyframes DiwaliCourseZoom{0%{opacity:0;transform:scale(.35)}75%{opacity:1;transform:scale(1.08)}100%{opacity:1;transform:scale(1)}}
+@keyframes DiwaliSparkle{0%{opacity:0;transform:translateY(0) rotate(0)}15%{opacity:1}100%{opacity:0;transform:translateY(-330px) rotate(240deg)}}
+
+@media(max-width:700px){
+ .AimNxt_Corp_Announcements{padding:10px}
+ .aimnxt-corp-promo-modal{width:100%;max-width:420px;max-height:calc(100vh - 20px);max-height:calc(100dvh - 20px);border-radius:17px}
+ .aimnxt-corp-promo-head{padding:12px 13px;gap:8px}
+ .aimnxt-corp-promo-head h2{font-size:17px}
+ .aimnxt-corp-promo-close{width:32px;height:32px;font-size:20px}
+ .aimnxt-corp-promo-body{padding:12px}
+ .aimnxt-corp-promo-grid{grid-template-columns:1fr;gap:10px}
+ .aimnxt-corp-promo-card{flex-direction:row;align-items:center;min-height:100px}
+ .aimnxt-corp-promo-card:hover{transform:none}
+ .aimnxt-corp-promo-thumb{width:43%;height:110px;flex:none;padding:5px}
+ .aimnxt-corp-promo-info{flex:1;min-width:0;gap:5px;padding:8px;border-top:0;border-left:1px solid #dbeafe}
+ .aimnxt-corp-promo-info h3{font-size:13px}
+ .aimnxt-corp-promo-info p{font-size:11px}
+ .aimnxt-corp-promo-btn{padding:8px 11px;font-size:11px}
+ .aimnxt-corp-poster-title{font-size:15px}
+ .aimnxt-corp-poster-img{max-height:calc(100dvh - 170px)}
+ .aimnxt-corp-poster-back{margin:12px auto 3px;padding:9px 15px;font-size:12px}
+ #aimnxtCorpPromo .Diwali_Corp_2026_Offers-stage{width:min(300px,90%);padding-top:17px;margin:4px auto 12px}
+ #aimnxtCorpPromo .Diwali_Corp_2026_Offers-pointer{border-left-width:14px;border-right-width:14px;border-top-width:28px}
+ #aimnxtCorpPromo .Diwali_Corp_2026_Offers-wheel{border-width:4px}
+ #aimnxtCorpPromo .Diwali_Corp_2026_Offers-hint{font-size:13px;margin:12px auto;text-align:center}
+ #aimnxtCorpPromo .Diwali_Corp_2026_Offers-result{min-height:260px;padding:24px 10px 20px;text-align:center!important}
+ #aimnxtCorpPromo .Diwali_Corp_2026_Offers-result-inner{align-items:center;text-align:center!important}
+ #aimnxtCorpPromo .Diwali_Corp_2026_Offers-pricebox{padding:13px 18px;margin-left:auto;margin-right:auto}
+ #aimnxtCorpPromo .Diwali_Corp_2026_Offers-enquire{align-self:center;padding:12px 25px;font-size:14px}
+ #aimnxtCorpPromo .Diwali_Corp_2026_Offers-back{align-self:center;margin:12px auto 0}
+}
+@media(max-width:380px){
+ .aimnxt-corp-promo-head h2{font-size:15px}
+ .aimnxt-corp-promo-thumb{height:95px}
+ .aimnxt-corp-promo-info h3{font-size:12px}
+ #aimnxtCorpPromo .Diwali_Corp_2026_Offers-stage{width:min(255px,88%)}
+ #aimnxtCorpPromo .Diwali_Corp_2026_Offers-result h3{font-size:25px}
+}
+@media(prefers-reduced-motion:reduce){
+ .AimNxt_Corp_Announcements *,
+ .AimNxt_Corp_Announcements *:before,
+ .AimNxt_Corp_Announcements *:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+</style>
+
+<div class="AimNxt_Corp_Announcements" id="aimnxtCorpPromo" hidden>
+  <div class="aimnxt-corp-promo-overlay" data-act="close"></div>
+
+  <section class="aimnxt-corp-promo-modal" role="dialog" aria-modal="true" aria-labelledby="aimnxtCorpPromoTitle">
+    <header class="aimnxt-corp-promo-head">
+      <h2 id="aimnxtCorpPromoTitle">AimNxt Special Announcements</h2>
+      <button type="button" class="aimnxt-corp-promo-close" data-act="close" aria-label="Close announcements">&times;</button>
+    </header>
+
+    <div class="aimnxt-corp-promo-body">
+
+      <div data-view="list">
+        <div class="aimnxt-corp-promo-grid">
+
+          <article class="aimnxt-corp-promo-card" data-card="genai" tabindex="0" role="button" aria-label="View Gen AI Masterclass poster">
+            <div class="aimnxt-corp-promo-thumb">
+              <img src="/assets/img/AimNxt_Annouments/Gen_AI_Masterclass_Updated.webp" alt="Gen AI Masterclass poster" loading="lazy">
+            </div>
+            <div class="aimnxt-corp-promo-info">
+              <h3>Gen AI Masterclass</h3>
+              <p>31st October 2026 · 9:00 AM-5:00 PM</p>
+              <button type="button" class="aimnxt-corp-promo-btn">View workshop poster →</button>
+            </div>
+          </article>
+
+          <article class="aimnxt-corp-promo-card" data-card="fortinet" tabindex="0" role="button" aria-label="View Fortinet demo poster">
+            <div class="aimnxt-corp-promo-thumb">
+              <img src="/assets/img/AimNxt_Annouments/Fortinet_FortiOS_Updated.webp" alt="Fortinet Online Demo poster" loading="lazy">
+            </div>
+            <div class="aimnxt-corp-promo-info">
+              <h3>Fortinet Online Demo</h3>
+              <p>Demo: 31st October. Daily classes start 2nd November 2026, 8:00-9:30 PM.</p>
+              <button type="button" class="aimnxt-corp-promo-btn">View Fortinet poster →</button>
+            </div>
+          </article>
+
+          <article class="aimnxt-corp-promo-card" data-card="wheel" tabindex="0" role="button" aria-label="Open Diwali course offers">
+            <div class="aimnxt-corp-promo-thumb">
+              <img src="/assets/img/AimNxt_Annouments/Diwali_2026_Updated.webp" alt="Diwali Course Fee Offers" loading="lazy">
+            </div>
+            <div class="aimnxt-corp-promo-info">
+              <h3>Diwali Course Fee Offers</h3>
+              <p>Spin the wheel and reveal your course offer.</p>
+              <button type="button" class="aimnxt-corp-promo-btn">Explore Diwali Offers →</button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <div data-view="poster" class="aimnxt-corp-poster-view" hidden>
+        <h3 class="aimnxt-corp-poster-title" tabindex="-1" data-focus data-title></h3>
+        <img class="aimnxt-corp-poster-img" data-img alt="">
+        <button type="button" class="aimnxt-corp-poster-back" data-act="back">← Back to Announcements</button>
+      </div>
+
+      <div data-view="wheel" class="Diwali_Corp_2026_Offers-view" hidden>
+        <div data-wheel-screen>
+          <div class="Diwali_Corp_2026_Offers-stage">
+            <span class="Diwali_Corp_2026_Offers-pointer" aria-hidden="true"></span>
+            <canvas class="Diwali_Corp_2026_Offers-wheel" data-wheel width="400" height="400" tabindex="0" role="button" aria-label="Click a course segment to spin the wheel"></canvas>
+          </div>
+
+          <p class="Diwali_Corp_2026_Offers-hint">
+            <strong>Choose your course!</strong><br>
+            Click any segment of the wheel to reveal your Diwali offer.
+          </p>
+        </div>
+
+        <div data-result class="Diwali_Corp_2026_Offers-result" aria-live="polite" hidden></div>
+
+        <button type="button" class="aimnxt-corp-poster-back Diwali_Corp_2026_Offers-back" data-act="back">← Back to Announcements</button>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  var w = document.getElementById('aimnxtCorpPromo');
+  if (!w || w.getAttribute('data-ready')) return;
+
+  w.setAttribute('data-ready', '1');
+  document.body.appendChild(w);
+
+  var X = 'Diwali_Corp_2026_Offers-';
+
+  var courses = [
+    {name:'Cyber Security',short:'Cyber Security',orig:'₹40,000',offer:'₹35,000'},
+    {name:'SOC Analyst',short:'SOC Analyst',orig:'₹30,000',offer:'₹25,000'},
+    {name:'Gen AI',short:'Gen AI',orig:'₹45,000',offer:'₹40,000'},
+    {name:'Java Full Stack',short:'Java Full Stack',orig:'₹25,000',offer:'₹22,000'},
+    {name:'Python Full Stack',short:'Python FS',orig:'₹25,000',offer:'₹22,000'},
+    {name:'Networking (CCNA + CCNP)',short:'CCNA + CCNP',orig:'₹30,000',offer:'₹25,000'}
+  ];
+
+  var posters = {
+    genai:{
+      
+      s:'/assets/img/AimNxt_Annouments/Gen_AI_Masterclass_2026_Poster.webp'
+    },
+    fortinet:{
+      
+      s:'/assets/img/AimNxt_Annouments/Fortinet_FortiOS_Administration_Training_Promo.webp'
+    }
+  };
+
+  var views = w.querySelectorAll('[data-view]');
+  var img = w.querySelector('[data-img]');
+  var ttl = w.querySelector('[data-title]');
+  var cv = w.querySelector('[data-wheel]');
+  var ctx = cv.getContext('2d');
+  var wheelScreen = w.querySelector('[data-wheel-screen]');
+  var result = w.querySelector('[data-result]');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  var last = null;
+  var prevOverflow = '';
+  var rot = 0;
+  var spinning = false;
+  var selectedIndex = -1;
+  var spinTimer = null;
+  var spinToken = 0;
+
+  function show(name) {
+    views.forEach(function (view) {
+      view.hidden = view.getAttribute('data-view') !== name;
+    });
+
+    var focusTarget = w.querySelector('[data-view="' + name + '"] [data-focus]');
+    if (focusTarget) focusTarget.focus();
+
+    var body = w.querySelector('.aimnxt-corp-promo-body');
+    if (body) body.scrollTop = 0;
+  }
+
+  function openP() {
+    if (!w.hidden) return;
+
+    last = document.activeElement;
+    prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    w.hidden = false;
+    show('list');
+
+    var closeButton = w.querySelector('button[data-act="close"]');
+    if (closeButton) closeButton.focus();
+  }
+
+  function closeP() {
+    if (w.hidden) return;
+
+    w.hidden = true;
+    document.body.style.overflow = prevOverflow;
+    resetWheel();
+
+    if (last && last.focus) last.focus();
+  }
+
+  function draw() {
+    var size = cv.width;
+    var center = size / 2;
+    var radius = center - 5;
+    var sector = Math.PI * 2 / courses.length;
+    var fills = ['#0EA5E9','#E0F2FE','#0754C7'];
+    var textColors = ['#FFFFFF','#172554','#FFFFFF'];
+
+    ctx.clearRect(0, 0, size, size);
+
+    courses.forEach(function (course, i) {
+      var start = -Math.PI / 2 + i * sector;
+      var end = start + sector;
+
+      ctx.beginPath();
+      ctx.moveTo(center, center);
+      ctx.arc(center, center, radius, start, end);
+      ctx.closePath();
+      ctx.fillStyle = fills[i % fills.length];
+      ctx.fill();
+      ctx.strokeStyle = '#FFFFFF';
+      ctx.lineWidth = 4;
+      ctx.stroke();
+
+      ctx.save();
+      ctx.translate(center, center);
+      ctx.rotate(start + sector / 2);
+      ctx.textAlign = 'right';
+      ctx.textBaseline = 'middle';
+      ctx.fillStyle = textColors[i % textColors.length];
+
+      var fontSize = course.short.length > 15 ? 13 : 16;
+      ctx.font = 'bold ' + fontSize + 'px Arial';
+      ctx.fillText(course.short, radius - 24, 0, radius - 55);
+      ctx.restore();
+    });
+
+    ctx.beginPath();
+    ctx.arc(center, center, 21, 0, Math.PI * 2);
+    ctx.fillStyle = '#FFFFFF';
+    ctx.fill();
+    ctx.strokeStyle = '#0EA5E9';
+    ctx.lineWidth = 5;
+    ctx.stroke();
+  }
+
+  function getClickedCourse(event) {
+    var rect = cv.getBoundingClientRect();
+    var x = (event.clientX - rect.left) * cv.width / rect.width;
+    var y = (event.clientY - rect.top) * cv.height / rect.height;
+    var center = cv.width / 2;
+    var dx = x - center;
+    var dy = y - center;
+
+    if (Math.sqrt(dx * dx + dy * dy) < 22) return -1;
+
+    var angle = Math.atan2(dy, dx);
+    var fromTop = (angle + Math.PI / 2 + Math.PI * 2) % (Math.PI * 2);
+
+    return Math.floor(fromTop / (Math.PI * 2 / courses.length));
+  }
+
+  function startSpin(index) {
+    if (spinning || index < 0 || index >= courses.length) return;
+
+    selectedIndex = index;
+    spinning = true;
+    spinToken++;
+
+    var currentToken = spinToken;
+    var currentAngle = ((rot % 360) + 360) % 360;
+    var targetAngle = (330 - index * 60 + 360) % 360;
+    var extraRotation = (targetAngle - currentAngle + 360) % 360;
+
+    rot += 1800 + extraRotation;
+
+    cv.style.transition = 'none';
+    cv.style.transform = 'rotate(' + currentAngle + 'deg)';
+    void cv.offsetWidth;
+
+    cv.style.transition = reduce.matches
+      ? 'none'
+      : 'transform 4.2s cubic-bezier(.12,.72,.12,1)';
+
+    cv.style.transform = 'rotate(' + rot + 'deg)';
+    cv.setAttribute('aria-label', 'Spinning to ' + courses[index].name);
+
+    if (spinTimer) clearTimeout(spinTimer);
+
+    if (reduce.matches) {
+      finishSpin(currentToken);
+    } else {
+      spinTimer = setTimeout(function () {
+        finishSpin(currentToken);
+      }, 4300);
+    }
+  }
+
+  function escapeHTML(value) {
+    return String(value).replace(/[&<>"']/g, function (character) {
+      return {
+        '&':'&amp;',
+        '<':'&lt;',
+        '>':'&gt;',
+        '"':'&quot;',
+        "'":'&#39;'
+      }[character];
+    });
+  }
+
+  function finishSpin(token) {
+    if (!spinning || token !== spinToken) return;
+
+    spinning = false;
+    spinTimer = null;
+
+    var course = courses[selectedIndex];
+
+    wheelScreen.hidden = true;
+
+    result.innerHTML =
+      '<div class="' + X + 'sparkles" aria-hidden="true">' +
+        '<span>✦</span><span>✧</span><span>✦</span><span>✧</span><span>✦</span>' +
+      '</div>' +
+      '<div class="' + X + 'result-inner">' +
+        '<p class="' + X + 'kicker">🪔 Diwali Special Offer 🪔</p>' +
+        '<h3>' + escapeHTML(course.name) + '</h3>' +
+        '<div class="' + X + 'pricebox">' +
+          '<p class="' + X + 'original">Original Fee: <s>' + escapeHTML(course.orig) + '</s></p>' +
+          '<p class="' + X + 'price-label">Your Diwali Offer Price</p>' +
+          '<p class="' + X + 'price">' + escapeHTML(course.offer) + '</p>' +
+        '</div>' +
+        '<p class="' + X + 'deadline">✨ Special offer valid until 7th November 2026 ✨</p>' +
+        '<a class="' + X + 'enquire" href="/register.html?course=' + encodeURIComponent(course.name) + '">Enquire Now →</a>' +
+      '</div>';
+
+    result.hidden = false;
+    cv.setAttribute('aria-label', 'Wheel stopped at ' + course.name);
+  }
+
+  function resetWheel() {
+    spinToken++;
+
+    if (spinTimer) {
+      clearTimeout(spinTimer);
+      spinTimer = null;
+    }
+
+    spinning = false;
+    selectedIndex = -1;
+    rot = 0;
+
+    cv.style.transition = 'none';
+    cv.style.transform = 'rotate(0deg)';
+    cv.setAttribute('aria-label', 'Click a course segment to spin the wheel');
+
+    wheelScreen.hidden = false;
+    result.hidden = true;
+    result.innerHTML = '';
+
+    draw();
+  }
+
+  function openPoster(key) {
+    var poster = posters[key];
+    if (!poster) return;
+
+    img.src = poster.s;
+    img.alt = poster.t + ' poster';
+    ttl.textContent = poster.t;
+    show('poster');
+  }
+
+  function handleCard(card) {
+    if (!card) return;
+
+    var key = card.getAttribute('data-card');
+
+    if (key === 'wheel') {
+      resetWheel();
+      show('wheel');
+    } else if (posters[key]) {
+      openPoster(key);
+    }
+  }
+
+  w.addEventListener('click', function (event) {
+    var target = event.target;
+    if (!target.closest) return;
+
+    var action = target.closest('[data-act]');
+    var card = target.closest('[data-card]');
+
+    if (action) {
+      var name = action.getAttribute('data-act');
+
+      if (name === 'close') {
+        closeP();
+        return;
+      }
+
+      if (name === 'back') {
+        resetWheel();
+        show('list');
+        return;
+      }
+    }
+
+    if (card) handleCard(card);
+  });
+
+  cv.addEventListener('click', function (event) {
+    if (spinning || !result.hidden || wheelScreen.hidden) return;
+
+    var index = getClickedCourse(event);
+    if (index >= 0) startSpin(index);
+  });
+
+  cv.addEventListener('keydown', function (event) {
+    if (event.key !== 'Enter' && event.key !== ' ') return;
+
+    event.preventDefault();
+
+    if (!spinning && result.hidden && !wheelScreen.hidden) {
+      startSpin(selectedIndex >= 0 ? (selectedIndex + 1) % courses.length : 0);
+    }
+  });
+
+  w.querySelectorAll('[data-card]').forEach(function (card) {
+    card.addEventListener('keydown', function (event) {
+      if (event.target !== card) return;
+
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        handleCard(card);
+      }
+    });
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' && !w.hidden) closeP();
+  });
+
+  draw();
+
+  function schedulePopup() {
+    setTimeout(openP, 3000);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', schedulePopup, {once:true});
+  } else {
+    schedulePopup();
+  }
+})();
+</script>
+
+
+
+
+
 
 
 
