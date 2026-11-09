@@ -54150,22 +54150,6 @@ body.thank-you-page .thank_you_hero_section_title {
     z-index: 10;
 }
 
-/* Mobile background */
-@media (max-width: 767.98px) {
-    .hero-section {
-        background-image: url("/assets/img/aimnxt_diwali_hero_Mobile.webp");
-        background-size: cover;
-        background-position: center top;
-    }
-}
-
-/* Tablet background */
-@media (min-width: 768px) and (max-width: 991.98px) {
-    .hero-section {
-        background-image: url("/assets/img/aimnxt_diwali_hero_Desktop.webp");
-        background-position: center center;
-    }
-}
 
 /* SUCCESS ANIMATION */
 
@@ -54370,4 +54354,73 @@ body.thank-you-page .thank_you_hero_section_title {
     text-align: center !important;
     text-wrap: balance;   /* splits the two lines evenly */
   }
+}/* GenAI Demo Popup - November 2026 */
+
+.GenAi_Demo_Nov_2026 {
+    position: fixed !important;
+    inset: 0;
+    z-index: 9999999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.GenAi_Demo_Nov_2026.active {
+    display: flex !important;
+}
+
+.GenAi_Demo_Nov_2026_overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(5px);
+}
+
+.GenAi_Demo_Nov_2026_container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 600px;
+}
+
+.GenAi_Demo_Nov_2026_container a {
+    display: block;
+}
+
+.GenAi_Demo_Nov_2026_image {
+    display: block;
+    width: 100%;
+    max-height: 88vh;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+.GenAi_Demo_Nov_2026_close {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    z-index: 5;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: #fff;
+    color: #111;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+@media(max-width:576px) {
+    .GenAi_Demo_Nov_2026_container {
+        max-width: 100%;
+    }
+
+    .GenAi_Demo_Nov_2026_image {
+        max-height: 85vh;
+    }
 }
