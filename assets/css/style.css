@@ -26454,12 +26454,12 @@ main .text-center, section .text-center {
     margin: auto;
     background: rgb(40, 47, 115);
     border-radius: 30px 30px 0px 0px;
-    min-height: 260px;
+    min-height: 160px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 60px 20px 100px;
+    padding: 20px 100px;
 }
 
 .ait-hero h1 {
@@ -26473,10 +26473,7 @@ main .text-center, section .text-center {
     color: rgba(255, 255, 255, 0.85);
 }
 
-.ait-form-section {
-    margin-top: -60px;
-    padding: 0px 40px 80px;
-}
+
 
 .ait-ticket-card {
     width: 100%;
@@ -54339,4 +54336,38 @@ body.thank-you-page .thank_you_hero_section_title {
     to {
         stroke-dashoffset: 0;
     }
+}
+/* ===== Raise A Ticket: mobile only ===== */
+@media (max-width: 576px) {
+
+  .ait-hero-box {
+    padding: 30px 16px !important;
+  }
+
+  .ait-hero-box > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  /* Heading: always one line */
+  .ait-hero .ait-hero-box h1 {
+    white-space: nowrap !important;
+    font-size: 28px !important;
+    line-height: 1.2 !important;
+    margin: 0 0 10px !important;
+    text-align: center !important;
+  }
+
+  /* Supporting text: wide enough to wrap into two lines */
+  .ait-hero .ait-hero-box p {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    text-align: center !important;
+    text-wrap: balance;   /* splits the two lines evenly */
+  }
 }
