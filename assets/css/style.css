@@ -54131,7 +54131,7 @@ body.thank-you-page .thank_you_hero_section_title {
 
 
 /* AimNxt Diwali Hero Background */
-.hero-section {
+/* .hero-section {
     position: relative;
     isolation: isolate;
     background-color: #071b50;
@@ -54140,7 +54140,7 @@ body.thank-you-page .thank_you_hero_section_title {
     background-position: center center;
     background-repeat: no-repeat;
     overflow: hidden;
-}
+} */
 
 /* Keep hero content above the background */
 .hero-section > .container {
