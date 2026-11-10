@@ -54424,3 +54424,78 @@ body.thank-you-page .thank_you_hero_section_title {
         max-height: 85vh;
     }
 }
+.Fortinet_Batch_1_Demo {
+    width: 100%;
+    background: #fff;
+    overflow: hidden;
+    padding: 12px 0;
+    color: #282f73;
+    position: relative;
+    z-index: 10;
+}
+
+.Fortinet_Batch_1_Demo .scroll-track {
+    display: flex;
+    width: max-content;
+    animation: Fortinet_Batch_1_Scroll 18s linear infinite;
+}
+
+.Fortinet_Batch_1_Demo .scroll-link {
+    display: block;
+    white-space: nowrap;
+    color: #282f73;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    padding-right: 80px;
+    transition: color 0.3s ease;
+}
+
+.Fortinet_Batch_1_Demo .scroll-link:hover {
+    color: #38bdf8;
+}
+
+@keyframes Fortinet_Batch_1_Scroll {
+    from {
+        transform: translateX(100vw);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Pause animation on hover */
+.Fortinet_Batch_1_Demo:hover .scroll-track,
+.Fortinet_Batch_1_Demo:focus-within .scroll-track {
+    animation-play-state: paused;
+}
+
+/* Desktop */
+@media (min-width: 769px) {
+    .Fortinet_Batch_1_Demo {
+        margin-top: 20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .Fortinet_Batch_1_Demo {
+        margin-top: 20px;
+        padding: 10px 0;
+    }
+
+    .Fortinet_Batch_1_Demo .scroll-link {
+        font-size: 12px;
+        padding-right: 40px;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .Fortinet_Batch_1_Demo .scroll-track {
+        animation: none;
+        width: auto;
+        overflow-x: auto;
+    }
+}
