@@ -500,7 +500,7 @@ src="https://www.facebook.com/tr?id=1350507153915494&ev=PageView&noscript=1"
     <i class="bi bi-calendar2-check"></i> Book A Free Demo
   </label>
 
-<a href="tel:+918977027424" class="bar-btn call-btn">
+<a href="tel:+918977792531" class="bar-btn call-btn">
     <i class="bi bi-telephone"></i> Call Now
 </a>
 
@@ -1975,92 +1975,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
-<!-- AimNxt GenAI Demo November 2026 -->
 
-<div id="GenAi_Demo_Nov_2026"
-     class="GenAi_Demo_Nov_2026">
-
-    <div class="GenAi_Demo_Nov_2026_overlay"></div>
-
-    <div class="GenAi_Demo_Nov_2026_container">
-
-        <button type="button"
-                class="GenAi_Demo_Nov_2026_close"
-                aria-label="Close popup">
-            &times;
-        </button>
-
-        <a href="https://us06web.zoom.us/meeting/register/ErG-fUvlSnqMoP-q4-jLEw"
-           target="_blank"
-           rel="noopener noreferrer">
-
-            <img src="/assets/img/aimnxt_genai_demo.webp"
-                 alt="AimNxt GenAI Free Live Demo"
-                 class="GenAi_Demo_Nov_2026_image">
-
-        </a>
-
-    </div>
-</div>
-
-<script>
-(function () {
-
-    function initGenAiDemoPopup() {
-
-        const popup = document.getElementById(
-            "GenAi_Demo_Nov_2026"
-        );
-
-        if (!popup || popup.dataset.initialized === "true") {
-            return;
-        }
-
-        popup.dataset.initialized = "true";
-
-        const closeBtn = popup.querySelector(
-            ".GenAi_Demo_Nov_2026_close"
-        );
-
-        const overlay = popup.querySelector(
-            ".GenAi_Demo_Nov_2026_overlay"
-        );
-
-        // Display after 3 seconds
-        setTimeout(function () {
-            popup.classList.add("active");
-        }, 3000);
-
-        // Close button
-        closeBtn.addEventListener("click", function () {
-            popup.classList.remove("active");
-        });
-
-        // Outside click
-        overlay.addEventListener("click", function () {
-            popup.classList.remove("active");
-        });
-
-        // Escape key
-        document.addEventListener("keydown", function (e) {
-            if (e.key === "Escape") {
-                popup.classList.remove("active");
-            }
-        });
-    }
-
-    if (document.readyState === "loading") {
-        document.addEventListener(
-            "DOMContentLoaded",
-            initGenAiDemoPopup
-        );
-    } else {
-        initGenAiDemoPopup();
-    }
-
-})();
-</script>
-<!-- End of AimNxt GenAI Demo Popup -->
 
   </body>
 </html>
